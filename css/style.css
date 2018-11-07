@@ -9,6 +9,7 @@ body {
   color: #fff;
   background: #333;
   overflow: hidden;
+  background-image: "https://i.imgur.com/g84SBr6.jpg"
 }
 
 .landing-inner {
@@ -24,7 +25,6 @@ body {
 
 .landing {
   position: relative;
-  background-image: "https://i.imgur.com/g84SBr6.jpg";
   background-size: cover;
   background-position: center;
   height: 100vh;
