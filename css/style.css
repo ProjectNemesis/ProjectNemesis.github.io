@@ -88,3 +88,23 @@ body {
     padding: 10px;
   }
 }
+
+@media (max-height: 600px) {
+  img {
+    width: 20%;
+  }
+
+  p {
+    display: none;
+  }
+}
+
+@media (max-height: 400px) {
+   img {
+    padding-bottom: 30px;
+  }
+  
+  h1 {
+    display: none;
+  }
+}
