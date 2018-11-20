@@ -1,0 +1,365 @@
+*,
+*:before,
+*:after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Helvetica Neue", sans-serif;
+}
+
+body,
+html {
+	height: 100%;
+	width: 100%;
+}
+
+
+/********** Header **********/
+
+#header {
+	width: 100%;
+	height: 100%;
+	/*background-image: url("https://i.imgur.com/FFm46dH.jpg");
+	background-image: url("https://i.imgur.com/Gw8GNFX.jpg");*/
+	/*background-image: url("https://i.imgur.com/Vjw1AxL.jpg");*/
+	background-image: url("https://s21.postimg.org/kdipqaj5j/Vjw1_Ax_L.jpg");
+	/*https://hd.unsplash.com/1/work-stations-plus-espresso.jpg
+	https://hd.unsplash.com/1/work-station-straight-on-view.jpg
+	https://static.pexels.com/photos/5199/hands-coffee-cup-apple.jpg*/
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	color: white;
+	-webkit-user-select: none;
+	cursor: default;
+	position: relative;
+}
+
+#headerTextWrapper {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+#headerTitle {
+	font-size: 45px;
+	text-transform: uppercase;
+}
+
+#headerLine {
+	background-color: white;
+	height: 2px;
+	width: 810px;
+	margin: 5px 0 10px;
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform 1s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+}
+
+#headerDetails {
+	font-size: 16px;
+	text-transform: uppercase;
+	transform: scaleX(1.188);
+}
+
+.headerCursor {
+	background-color: white;
+	display: inline-block;
+	width: 2.2px;
+	height: 100%;
+	margin-left: 5px;
+	animation: blink-caret 1s step-end infinite;
+}
+
+@keyframes blink-caret {
+	from,
+	to {
+		background-color: transparent
+	}
+	50% {
+		background-color: white
+	}
+}
+
+#headerScrollDown {
+	border: 2px solid white;
+	border-radius: 50%;
+	width: 75px;
+	height: 75px;
+	position: absolute;
+	bottom: 33px;
+	left: 50%;
+	transform: rotate(90deg);
+	cursor: pointer;
+}
+
+#headerScrollDown:hover {
+	animation: scroll-down 1s infinite;
+}
+
+#headerScrollDown span {
+	font-size: 85px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	margin-top: -36px;
+	margin-left: 25px;
+	display: inline-block;
+}
+
+@keyframes scroll-down {
+	from,
+	to {
+		bottom: 33px
+	}
+	50% {
+		bottom: 50px
+	}
+}
+
+
+/********** Content **********/
+
+main {
+	width: 100%;
+	background-color: #e2cbb1;
+	overflow: hidden;
+}
+
+#main-about-container {
+	background-image: url("https://s15.postimg.org/nu2uzs9yj/Messages_BG_Blurred.jpg");
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 600px;
+}
+
+#phone-container {
+	width: 800px;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+#top-phone,  #bottom-phone {
+	content: '';
+	height: 40px;
+	background: rgba(0, 0, 0, 0.4);
+}
+
+#top-phone {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 60px;
+}
+
+#phone-title {
+	color: white;
+	font-size: 18px;
+}
+
+#phone-messages-scroll {
+	/*overflow-y: scroll;*/
+	overflow-x: hidden;
+	height: 400px;
+}
+
+#phone-messages {
+	display: flex;
+	flex-direction: column;
+	margin: 20px;
+	margin-bottom: 30px; /* Add the time stamp */
+}
+
+.about {
+	max-width: 53%;
+	min-width: 75px;
+	margin-bottom: 27px;
+	margin-right: 12px;
+	padding: 15px;
+	align-self: flex-end;
+	text-align: right;
+	background-color: rgba(237,186,75,0.7);
+	color: rgba(0, 0, 0, 0.8);
+	font-family: 'Helvetica Neue', sans-serif;
+	font-size: 16px;
+	border-radius: 15px;
+	position: relative;
+	z-index: 0;
+}
+
+.about:last-child {
+	margin: 0;
+}
+
+.text-message-animation {
+	animation: text-message-bounce 370ms linear both;
+}
+
+.about.left {
+	text-align: left;
+	align-self: flex-start;
+	margin-left: 12px;
+	background-color: rgba(79,174,186,0.7);
+}
+
+.about::before {
+	content: "";
+	background-image: url("https://rawgit.com/SimchaCahn/185e9ce128a0d3e539884f5c40b5a565/raw/dc5ccd58d0089d38279829f73c5e4efdafc60075/svgOrange.svg");
+	background-repeat: no-repeat;
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	bottom: -7.2px;
+    right: -15.1px;
+	transform: scaleX(-1);
+	/*border-color: rgba(0, 0, 0, 0.3);
+	box-sizing: initial;
+	border-radius: 50%;
+	border-style: solid;
+	border-width: 0 25px;
+	position: absolute;
+	height: 43px;
+	width: 53px;
+	bottom: -4px;
+	right: -78px;
+	clip: rect(18px, 37px, 42px, 0px);
+	z-index: -1;*/
+}
+
+.about.left::before {
+	transform: scaleX(1);
+	right: initial;
+	left: -15px;
+	background-image: url("https://rawgit.com/SimchaCahn/9e0bbc05dc338eb1374eb9bd41f6e023/raw/86b5e22c1d874b630024af03b68b4f90fa93f80c/svgBlue.svg");
+}
+
+.message-info {
+	position: absolute;
+	bottom: -17px;
+	right: 12px;
+	font-size: 11px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.about.left .message-info {
+	right: initial;
+	left: 12px;
+}
+
+/*
+.about::before {
+	background-image: url("http://bit.do/msgAddon");
+	content: "";
+	box-sizing: initial;
+	border-color: rgba(0, 0, 0, 0.3);
+	border-radius: 50%;
+	border-style: solid;
+	border-width: 0 25px;
+	position: absolute;
+	height: 43px;
+	width: 53px;
+	bottom: -4px;
+	right: -78px;
+	clip: rect(18px, 37px, 42px, 0px);
+	z-index: -1;
+}
+
+.about.left::before {
+	transform: scaleX(-1);
+	left: -78px;
+}
+*/
+
+.msg-connector {
+	display: block;
+	width: 9%;
+	height: 15px;
+	background-color: grey;
+	position: relative;
+	left: 70%;
+}
+
+.msg-connector::before,
+.msg-connector::after {
+	content: '';
+	box-sizing: initial;
+	display: inline-block;
+	width: 37px;
+	height: 17px;
+	position: absolute;
+	top: -1px;
+}
+
+.msg-connector::before {
+	left: -37px;
+	border-radius: 0 50% 50% 0;
+	border-right: 12px solid grey;
+}
+
+.msg-connector::after {
+	right: -37px;
+	border-radius: 50% 0 0 50%;
+	border-left: 12px solid grey;
+}
+
+@keyframes text-message-bounce {
+	0% {
+		transform: scale(0.5);
+		opacity: 0.3;
+	}
+	20% {
+		opacity: 1;
+	}
+	40% {
+		transform: scale(1.2);
+	}
+	70% {
+		transform: scale(0.9);
+	}
+	100% {
+		transform: scale(1.0);
+	}
+}
+
+.loading-bubble-container {
+	display: flex;
+	justify-content: center;
+	padding-top: 25px;
+	/* 10 + translateY(x) in 'load-bubble-anim' anim*/
+}
+
+.loading-bubble:nth-child(2) {
+	margin: 0 6px;
+	animation-delay: 0.15s;
+}
+
+.loading-bubble:nth-child(3) {
+	animation-delay: 0.3s;
+}
+
+.loading-bubble {
+	background-color: rgba(0, 0, 0, 0.8);
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	animation: load-bubble-anim 0.45s cubic-bezier(0, 0, 0.15, 1) alternate infinite;
+}
+
+@keyframes load-bubble-anim {
+	from {
+		transform: translateY(0) scaleY(0.8);
+	}
+	to {
+		transform: translateY(-15px);
+	}
+}
+
+footer {
+	text-align: center;
+    margin: 30px;
+}
